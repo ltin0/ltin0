@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  SALVAR EM:  .github/workflows/profile-3d.yml   (no repositório ltin0/ltin0)
+#
+#  O que faz: renderiza o seu calendário de contribuições como um gráfico 3D
+#  isométrico e commita os SVGs na pasta profile-3d-contrib/ da branch main.
+#
+#  Action:  https://github.com/yoshi389111/github-profile-3d-contrib
+#
+#  ⚠️ VALIDAR: estou usando @main porque não tenho certeza de qual é a tag de
+#     versão mais recente. Recomendo abrir a página de Releases da action,
+#     pegar a tag mais nova (ex.: @0.8.0) e trocar abaixo — pinar versão é boa
+#     prática de segurança em supply chain de Actions.
+#
+#  ⚠️ A action gera VÁRIOS arquivos de tema nessa pasta. Depois da primeira
+#     execução, abra profile-3d-contrib/ no repo, escolha o que você prefere e
+#     ajuste o nome do arquivo no README.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: GitHub profile 3D contribution
+
+on:
+  schedule:
+    # Todo dia às 18:00 UTC (15:00 em Brasília)
+    # 🔧 EDITAR: ajuste o horário se quiser
+    - cron: "0 18 * * *"
+  workflow_dispatch: # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate 3D contribution graph
+        # 🔧 EDITAR: troque @main pela tag de versão mais recente (ver aviso acima)
+        uses: yoshi389111/github-profile-3d-contrib@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit and push generated SVGs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A profile-3d-contrib
+          # "|| exit 0" evita falhar o workflow quando nada mudou no dia
+          git commit -m "chore: update 3d contribution graph" || exit 0
+          git push
