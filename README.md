@@ -1,4 +1,3 @@
-<!--
 ═══════════════════════════════════════════════════════════════════════════════
   README de perfil — Leonardo Tino (github.com/ltin0)
   Repositório: ltin0/ltin0   (o repo precisa ter EXATAMENTE o seu username)
@@ -12,7 +11,6 @@
    • Layout via <div align>, <table>, width= — a única forma confiável
    • Todas as <img> têm alt=
 ═══════════════════════════════════════════════════════════════════════════════
--->
 
 <div align="center">
 
