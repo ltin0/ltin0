@@ -1,0 +1,61 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  SALVAR EM:  .github/workflows/jet.yml   (no repo ltin0/ltin0)
+#
+#  O que faz: regenera assets/jet.svg — o grid de contribuições como jogo de
+#  nave — e commita direto na branch principal.
+#
+#  Diferente do Pac-Man e do snake, aqui NÃO existe action de terceiro. O
+#  desenho sai de scripts/build_jet.py, que vive neste repositório. Se este
+#  workflow parar de rodar amanhã, o último SVG continua no ar para sempre —
+#  no pior caso, deixa de atualizar. Nenhum serviço externo pode derrubá-lo.
+#
+#  Sem dependência de pacote: o script usa só a biblioteca padrão do Python.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: Generate contribution jet
+
+on:
+  schedule:
+    # Todo dia às 03:20 UTC (00:20 em Brasília). Cron do GitHub roda em UTC.
+    # 🔧 EDITAR: ajuste o horário se quiser
+    - cron: "20 3 * * *"
+  workflow_dispatch: # permite rodar manualmente pela aba Actions
+  push:
+    branches:
+      - main
+    paths:
+      # Só reage a mudança no gerador — push de README não precisa redesenhar
+      - "scripts/build_jet.py"
+      - ".github/workflows/jet.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render jet.svg
+        env:
+          # Token padrão da Action: basta para ler o calendário público
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_jet.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/jet.svg assets/.contrib-cache.json
+          # "|| exit 0" evita falhar o workflow nos dias sem alteração
+          git commit -m "chore: update contribution jet" || exit 0
+          git push

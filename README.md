@@ -95,16 +95,15 @@
 
 <br /><br />
 
-<!-- ── Pac-Man, gerado por .github/workflows/pacman.yml.
-     As imagens só aparecem depois da primeira execução do workflow.
-     EDITAR — trocar de jogo: mude o input "games" no workflow. A action também
-     gera breakout, galaga, puzzle-bobble, bomberman e minesweeper. O arquivo
-     acompanha o nome do jogo: <jogo>-contribution-graph.svg -->
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph.svg" />
-  <img alt="Animação estilo Pac-Man gerada a partir do grid de contribuições do GitHub de Leonardo Tino" width="100%" src="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph.svg" />
-</picture>
+<!-- ── Jogo de nave sobre o grid de contribuições.
+     Desenhado por scripts/build_jet.py e regenerado por .github/workflows/jet.yml.
+     Não é serviço de terceiro: o arquivo mora neste repositório, então não cai.
+     EDITAR: número de alvos, duração do voo e cores ficam no topo do script. -->
+<img
+  src="assets/jet.svg"
+  alt="Grid de contribuições de Leonardo Tino no GitHub no último ano, animado como um jogo de nave: uma nave percorre o ano e dispara nos dias de maior atividade"
+  width="100%"
+/>
 
 <br /><br />
 
