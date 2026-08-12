@@ -1,0 +1,3 @@
+# Cache local do build_jet.py — regenerado pela Action, nao versionar.
+# Versiona-lo faz o commit diario do robo conflitar com todo build local.
+assets/.contrib-cache.json
