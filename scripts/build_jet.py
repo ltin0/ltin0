@@ -34,9 +34,13 @@ from urllib.request import Request, urlopen
 GITHUB_USER = "ltin0"
 TITULO = "Contribution Activity"
 LEGENDA = "A nave percorre o ano e dispara nos dias de maior atividade."
-ALVOS = 9          # quantos dias campeões são alvejados por volta
-DUR_VOO = 11.0     # segundos para a nave cruzar o ano
-DUR_CICLO = 14.0   # duração total antes de reiniciar
+ALVOS = 9           # quantos dias campeões são alvejados por volta
+# A travessia É o ciclo inteiro: a nave nasce fora do card à esquerda e sai
+# fora dele à direita, então o salto do fim para o início acontece com ela
+# invisível. Sem isso o loop mostra a nave parada esperando e depois teleportando.
+DUR_VOLTA = 13.0    # segundos de uma travessia completa
+VIDA_ALVO = 3.2     # segundos que a célula atingida fica marcada
+DUR_ORBITA = 7.0    # segundos para o facho dar uma volta na moldura
 
 # ── identidade visual (mesma do resto do perfil) ─────────────────────────────
 BG      = "#131317"
@@ -189,47 +193,64 @@ def build() -> str:
             f'text-anchor="end">{rot}</text>' for wd, rot in DIAS.items()]
 
     # ── nave, tiros e explosões ──────────────────────────────────────────────
-    x_ini, x_fim = PAD_L - 26, PAD_L + grid_w + 26
-    t_limpa = DUR_VOO + 1.0    # instante global em que as células devem apagar
-    tiros, flashes, kf_acerto = [], [], []
-    for i, (c, wd, _n) in enumerate(alvos(semanas, ALVOS)):
+    # Vai e volta. A nave nasce fora do card à esquerda, sai fora dele à
+    # direita e retorna — a inversão de sentido acontece com ela invisível,
+    # então não se vê o "quique". Metade do ciclo para cada sentido.
+    x_ini, x_fim = -30, W + 30
+    meia = DUR_VOLTA / 2
+
+    # Alvos alternados entre ida e volta: assim nenhuma célula pisca duas vezes
+    # no mesmo ciclo e a ação se espalha melhor pelo ano.
+    todos = alvos(semanas, ALVOS * 2)
+    rota = [(alvo, "ida") for alvo in todos[0::2]] + \
+           [(alvo, "volta") for alvo in todos[1::2]]
+
+    tiros, flashes = [], []
+    for (c, wd, _n), sentido in rota:
         x_alvo = PAD_L + c * PITCH + CELL / 2
         y_alvo = Y_GRID + wd * PITCH
-        # instante em que a nave está sobre a coluna
-        t = (x_alvo - x_ini) / (x_fim - x_ini) * DUR_VOO
+        # instante em que a nave passa sobre a coluna, em cada sentido
+        avanco = (x_alvo - x_ini) / (x_fim - x_ini)
+        t = avanco * meia if sentido == "ida" else meia + (1 - avanco) * meia
         subida = y_lane - (y_alvo + CELL)
         tiros.append(
             f'<rect class="tiro" x="{x_alvo - 1:.1f}" y="{y_lane - 10:.1f}" '
             f'width="2" height="9" rx="1" fill="{GREEN}" '
             f'style="--sobe:{-subida:.1f}px;animation-delay:{t:.2f}s"/>')
-
-        # ── a sutileza que quebra tudo ───────────────────────────────────────
-        # As porcentagens de @keyframes são relativas ao ciclo PRÓPRIO do
-        # elemento, que o animation-delay desloca — não ao relógio comum. Com
-        # um único @keyframes compartilhado, a célula atingida aos 10s só
-        # apagaria aos 21s, ou seja, continuaria acesa na volta seguinte.
-        # Por isso cada alvo recebe o seu, com o ponto de apagar calculado a
-        # partir do próprio delay.
-        t_hit = t + 0.30
-        p = max(2.0, (t_limpa - t_hit) / DUR_CICLO * 100)
-        kf_acerto.append(f"""    @keyframes acerto{i} {{
-      0%              {{ opacity: 0; }}
-      0.1%            {{ opacity: .95; }}
-      1.6%            {{ opacity: .5; }}
-      {p:.2f}%        {{ opacity: .5; }}
-      {p + 2.5:.2f}%, 100% {{ opacity: 0; }}
-    }}
-    .hit{i} {{ animation-name: acerto{i}; animation-delay: {t_hit:.2f}s; }}""")
-
+        # ── por que agora basta um @keyframes para todos ─────────────────────
+        # Porcentagem de @keyframes é relativa ao ciclo PRÓPRIO do elemento,
+        # que o animation-delay desloca. Antes a célula precisava apagar num
+        # instante global fixo, e cada alvo exigia a sua regra. Agora a vida do
+        # alvo é contada A PARTIR DO TIRO ({VIDA_ALVO}s), que é exatamente o que
+        # o ciclo deslocado já expressa — então a regra é uma só, e não existe
+        # mais o momento de reset coletivo.
         flashes.append(
-            f'<rect class="hit hit{i}" x="{x_alvo - CELL / 2:.1f}" y="{y_alvo}" '
-            f'width="{CELL}" height="{CELL}" rx="2.5" fill="{VIOLET}"/>')
+            f'<rect class="hit" x="{x_alvo - CELL / 2:.1f}" y="{y_alvo}" '
+            f'width="{CELL}" height="{CELL}" rx="2.5" fill="{VIOLET}" '
+            f'style="animation-delay:{t + 0.30:.2f}s"/>')
         flashes.append(
             f'<circle class="boom" cx="{x_alvo:.1f}" cy="{y_alvo + CELL / 2}" '
             f'r="3" fill="none" stroke="{VIOLET}" stroke-width="1.5" '
-            f'style="animation-delay:{t_hit:.2f}s"/>')
+            f'style="animation-delay:{t + 0.30:.2f}s"/>')
 
-    fim_voo = DUR_VOO / DUR_CICLO * 100   # % do ciclo em que a nave chega ao fim
+    # ── facho que orbita a moldura ───────────────────────────────────────────
+    # Um traço curto correndo o perímetro via stroke-dashoffset.
+    #
+    # NÃO calcular o perímetro à mão: a fórmula geométrica (2(W-2r) + 2(H-2r)
+    # + 2πr) deu 1860, mas o getTotalLength do navegador mede 1855,4, porque
+    # ele aproxima os arcos dos cantos por segmentos. Os 4,6px de diferença
+    # viram um salto visível a cada volta, e o erro muda conforme o renderizador.
+    # Com pathLength o comprimento passa a ser declarado por nós: dasharray e
+    # dashoffset viram unidade normalizada e a volta fecha exata em qualquer
+    # navegador.
+    r_card = 14
+    PATH_LEN = 1000
+    facho = PATH_LEN * 0.16
+
+    # Marcos do ciclo em porcentagem, derivados dos segundos acima. Deixar o
+    # tempo em segundos nas constantes e converter aqui evita number mágico
+    # espalhado pelo CSS.
+    pct = lambda seg: seg / DUR_VOLTA * 100
     legenda_x = W - PAD_R - 132
     escala = "".join(
         f'<rect x="{legenda_x + 30 + i * 13}" y="{Y_TITULO - 9}" width="10" '
@@ -242,35 +263,46 @@ def build() -> str:
 
   <style>
     /* Animação 100% CSS: o GitHub não executa JavaScript em SVG de README.
-       Todos os elementos compartilham o mesmo ciclo de {DUR_CICLO}s, e cada tiro
+       Todos os elementos compartilham o mesmo ciclo de {DUR_VOLTA}s, e cada tiro
        entra pelo seu próprio animation-delay, calculado a partir do instante em
        que a nave passa sobre a coluna alvo. */
-    .nave {{ animation: voo {DUR_CICLO}s linear infinite; }}
-    .tiro {{ opacity: 0; animation: disparo {DUR_CICLO}s linear infinite; }}
-    /* .hit não declara animation-name aqui: cada alvo tem o seu, gerado abaixo. */
-    .hit   {{ opacity: 0; animation-duration: {DUR_CICLO}s; animation-timing-function: linear;
-             animation-iteration-count: infinite; }}
-    .boom  {{ opacity: 0; animation: explosao {DUR_CICLO}s ease-out infinite; }}
-    .chama {{ animation: motor .45s ease-in-out infinite alternate; }}
-    .aura  {{ animation: respira 5s ease-in-out infinite alternate; }}
+    .nave   {{ animation: voo {DUR_VOLTA}s linear infinite; }}
+    .tiro   {{ opacity: 0; animation: disparo {DUR_VOLTA}s linear infinite; }}
+    .hit    {{ opacity: 0; animation: acerto {DUR_VOLTA}s linear infinite; }}
+    .boom   {{ opacity: 0; animation: explosao {DUR_VOLTA}s ease-out infinite; }}
+    .chama  {{ animation: motor .45s ease-in-out infinite alternate; }}
+    .aura   {{ animation: respira 5s ease-in-out infinite alternate; }}
+    .orbita {{ animation: orbita {DUR_ORBITA}s linear infinite; }}
 
+    /* Vai e volta: ida em 50%, retorno nos outros 50%. Como as duas pontas
+       ficam fora do card, a inversão de sentido acontece com a nave invisível
+       — não se vê o "quique" nem o teleporte. Timing linear de propósito: os
+       instantes de tiro são calculados linearmente, e um ease dessincronizaria
+       o disparo da posição. */
     @keyframes voo {{
-      0%             {{ transform: translateX(0); }}
-      {fim_voo:.1f}% {{ transform: translateX({x_fim - x_ini}px); }}
-      100%           {{ transform: translateX({x_fim - x_ini}px); }}
+      0%   {{ transform: translateX(0); }}
+      50%  {{ transform: translateX({x_fim - x_ini}px); }}
+      100% {{ transform: translateX(0); }}
     }}
     @keyframes disparo {{
-      0%           {{ opacity: 0; transform: translateY(0); }}
-      0.1%         {{ opacity: 1; transform: translateY(0); }}
-      2.3%         {{ opacity: 1; transform: translateY(var(--sobe)); }}
-      2.4%, 100%   {{ opacity: 0; transform: translateY(var(--sobe)); }}
+      0%                        {{ opacity: 0; transform: translateY(0); }}
+      {pct(0.02):.2f}%          {{ opacity: 1; transform: translateY(0); }}
+      {pct(0.32):.2f}%          {{ opacity: 1; transform: translateY(var(--sobe)); }}
+      {pct(0.34):.2f}%, 100%    {{ opacity: 0; transform: translateY(var(--sobe)); }}
     }}
-{chr(10).join(kf_acerto)}
+    /* Vida do alvo contada a partir do tiro, não de um instante global. */
+    @keyframes acerto {{
+      0%                            {{ opacity: 0; }}
+      {pct(0.02):.2f}%              {{ opacity: .95; }}
+      {pct(0.30):.2f}%              {{ opacity: .5; }}
+      {pct(VIDA_ALVO):.2f}%         {{ opacity: .5; }}
+      {pct(VIDA_ALVO + 0.8):.2f}%, 100% {{ opacity: 0; }}
+    }}
     @keyframes explosao {{
-      0%    {{ opacity: 0;  transform: scale(.3); transform-origin: center; }}
-      .1%   {{ opacity: .9; transform: scale(.3); transform-origin: center; }}
-      2.5%  {{ opacity: 0;  transform: scale(2.6); transform-origin: center; }}
-      100%  {{ opacity: 0;  transform: scale(2.6); transform-origin: center; }}
+      0%                     {{ opacity: 0;  transform: scale(.3); transform-origin: center; }}
+      {pct(0.02):.2f}%       {{ opacity: .9; transform: scale(.3); transform-origin: center; }}
+      {pct(0.45):.2f}%       {{ opacity: 0;  transform: scale(2.6); transform-origin: center; }}
+      100%                   {{ opacity: 0;  transform: scale(2.6); transform-origin: center; }}
     }}
     @keyframes motor {{
       from {{ opacity: .35; }} to {{ opacity: 1; }}
@@ -280,12 +312,18 @@ def build() -> str:
     @keyframes respira {{
       from {{ opacity: .38; }} to {{ opacity: .78; }}
     }}
+    /* O facho percorre exatamente um perímetro por ciclo, então a emenda cai
+       no mesmo ponto e a volta fecha sem salto. */
+    @keyframes orbita {{
+      from {{ stroke-dashoffset: 0; }}
+      to   {{ stroke-dashoffset: -{PATH_LEN}; }}
+    }}
 
     /* Quem pediu menos movimento no sistema vê o grid parado, com a nave
        no início da pista e sem tiros. O dado continua legível. */
     @media (prefers-reduced-motion: reduce) {{
-      .nave, .tiro, .hit, .boom, .chama, .aura {{ animation: none; }}
-      .tiro, .hit, .boom {{ opacity: 0; }}
+      .nave, .tiro, .hit, .boom, .chama, .aura, .orbita {{ animation: none; }}
+      .tiro, .hit, .boom, .orbita {{ opacity: 0; }}
       .aura {{ opacity: .6; }}
     }}
   </style>
@@ -307,8 +345,18 @@ def build() -> str:
        suave do brilho; uma só fica com corte visível na borda. -->
   <rect class="aura" x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="14"
         fill="none" stroke="url(#borda)" stroke-width="4" filter="url(#halo)"/>
-  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="14"
+  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="{r_card}"
         fill="{BG}" stroke="url(#borda)" stroke-width="1.4"/>
+  <!-- Facho orbitando a moldura, para sempre. pathLength normaliza o
+       comprimento, então a volta fecha exata em qualquer renderizador. -->
+  <rect class="orbita" x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="{r_card}"
+        pathLength="{PATH_LEN}" fill="none" stroke="{GREEN}" stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-dasharray="{facho:.0f} {PATH_LEN - facho:.0f}" filter="url(#halo)"/>
+  <rect class="orbita" x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="{r_card}"
+        pathLength="{PATH_LEN}" fill="none" stroke="{TEXT}" stroke-width="1.2"
+        stroke-linecap="round"
+        stroke-dasharray="{facho * 0.4:.0f} {PATH_LEN - facho * 0.4:.0f}" opacity="0.9"/>
 
   <text x="{PAD_L - 8}" y="{Y_TITULO}" font-family="{SANS}" font-size="14"
         font-weight="700" fill="{TEXT}">{TITULO}</text>
