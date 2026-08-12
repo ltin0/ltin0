@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"
+     width="1000" height="400" role="img" aria-label="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Aberto a oportunidades remotas. Stack: TypeScript, Next.js, React, PHP, WordPress, Docker.">
+  <title>Leonardo Tino — Desenvolvedor Web Full Stack</title>
+
+  <defs>
+    <linearGradient id="skin" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%"   stop-color="#4ADE80"/>
+      <stop offset="55%"  stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#4ADE80"  stop-opacity="0.16"/>
+      <stop offset="70%"  stop-color="#A78BFA" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="999" height="399" rx="18" fill="#131317" stroke="#26262D"/>
+  <rect x="18" y="0.5" width="964" height="1" fill="#4ADE80" opacity="0.35"/>
+
+  <ellipse cx="208" cy="200" rx="210" ry="190" fill="url(#glow)"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="11" fill="url(#skin)"
+     xml:space="preserve" style="white-space:pre">
+    <text x="56" y="39.4" textLength="303.6" lengthAdjust="spacing">                        ..                    </text>
+    <text x="56" y="52.6" textLength="303.6" lengthAdjust="spacing">                  ..::::::::::.               </text>
+    <text x="56" y="65.8" textLength="303.6" lengthAdjust="spacing">                 .-..:::..:.....              </text>
+    <text x="56" y="79.0" textLength="303.6" lengthAdjust="spacing">                 :.-*###**##*=.               </text>
+    <text x="56" y="92.2" textLength="303.6" lengthAdjust="spacing">                 .=%@@@@@@@%%%+:              </text>
+    <text x="56" y="105.4" textLength="303.6" lengthAdjust="spacing">                 :*%%##%@%#+**#=              </text>
+    <text x="56" y="118.6" textLength="303.6" lengthAdjust="spacing">                 :#%#**#%#***#%*=.            </text>
+    <text x="56" y="131.8" textLength="303.6" lengthAdjust="spacing">                .*%@@@@%@%#%@%%%*.            </text>
+    <text x="56" y="145.0" textLength="303.6" lengthAdjust="spacing">                 =@@@@%###*#%%%#+             </text>
+    <text x="56" y="158.2" textLength="303.6" lengthAdjust="spacing">                 .=%%%####**#%#-              </text>
+    <text x="56" y="171.4" textLength="303.6" lengthAdjust="spacing">                   -%%%@@@@%*#+               </text>
+    <text x="56" y="184.6" textLength="303.6" lengthAdjust="spacing">                   :%*:=**=::#=               </text>
+    <text x="56" y="197.8" textLength="303.6" lengthAdjust="spacing">                 .=*%%*+====*#+.              </text>
+    <text x="56" y="211.0" textLength="303.6" lengthAdjust="spacing">             ..  -@%%@%%%%######-             </text>
+    <text x="56" y="224.2" textLength="303.6" lengthAdjust="spacing">          .  .   .#@%@@%%%#%%##%*             </text>
+    <text x="56" y="237.4" textLength="303.6" lengthAdjust="spacing">      .. .        :%@@@@%%@%%%%%-             </text>
+    <text x="56" y="250.6" textLength="303.6" lengthAdjust="spacing">    ...            :#@%%%@@%%%%=          ..  </text>
+    <text x="56" y="263.8" textLength="303.6" lengthAdjust="spacing">   ...              .*%@@@@@%*:             . </text>
+    <text x="56" y="277.0" textLength="303.6" lengthAdjust="spacing">  ..                  :+#%#+:                .</text>
+    <text x="56" y="290.2" textLength="303.6" lengthAdjust="spacing">  ..                     .                   .</text>
+    <text x="56" y="303.4" textLength="303.6" lengthAdjust="spacing">  .                                           </text>
+    <text x="56" y="316.6" textLength="303.6" lengthAdjust="spacing">  .                               .-.         </text>
+    <text x="56" y="329.8" textLength="303.6" lengthAdjust="spacing">                                  -#.         </text>
+    <text x="56" y="356.2" textLength="303.6" lengthAdjust="spacing">         .-.                                  </text>
+    <text x="56" y="369.4" textLength="303.6" lengthAdjust="spacing">          ..                                  </text>
+  </g>
+
+  <g>
+    <rect x="420" y="66" width="330" height="30" rx="15" fill="#0F2A1B" stroke="#1F6F42"/>
+    <circle cx="438" cy="81" r="4" fill="#4ADE80"/>
+    <text x="452" y="86" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600"
+          letter-spacing="0.6" fill="#4ADE80">ABERTO A OPORTUNIDADES · REMOTO</text>
+  </g>
+
+  <text x="420" y="164" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="52" font-weight="700"
+        fill="#4ADE80">Leonardo Tino</text>
+
+  <text x="420" y="200" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="19" font-weight="600" fill="#F4F4F5">
+    Desenvolvedor Web Full Stack<tspan fill="#A1A1AA" font-weight="400"> · São Paulo, Brasil</tspan>
+  </text>
+
+  <text x="420" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">Desenvolvo experiências digitais rápidas, escaláveis</text>
+  <text x="420" y="262" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">e orientadas a resultados — do modelo de dados ao deploy.</text>
+
+  <g>
+    <rect x="420" y="300" width="92" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="466" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">TypeScript</text>
+  </g>
+  <g>
+    <rect x="521" y="300" width="74" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="558" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Next.js</text>
+  </g>
+  <g>
+    <rect x="604" y="300" width="66" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="637" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">React</text>
+  </g>
+  <g>
+    <rect x="679" y="300" width="54" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="706" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">PHP</text>
+  </g>
+  <g>
+    <rect x="742" y="300" width="94" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="789" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">WordPress</text>
+  </g>
+  <g>
+    <rect x="845" y="300" width="72" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="881" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Docker</text>
+  </g>
+</svg>

@@ -3,59 +3,60 @@
   README de perfil — Leonardo Tino · github.com/ltin0
   Repositório: ltin0/ltin0 (precisa ter EXATAMENTE o mesmo nome do usuário)
 
-  COMO EDITAR
-  • Tudo que você precisa preencher está como {{PLACEHOLDER}}
-  • Pontos customizáveis estão marcados com:  <!-- EDITAR: ... -- >
-  • Acento visual do perfil: #00E19B (verde)  ·  Fundo: #0D1117  ·  Texto: #C9D1D9
-    Se quiser trocar o acento, faça Localizar/Substituir de 00E19B no arquivo todo.
+  IDENTIDADE VISUAL
+    fundo    #0A0A0C      superfície  #131317      borda      #26262D
+    verde    #4ADE80      violeta     #A78BFA
+    texto    #F4F4F5      secundário  #A1A1AA
+  Para trocar o acento, faça Localizar/Substituir de 4ADE80 no arquivo todo.
+
+  O CARD DE HERO é assets/hero.svg — desenhado à mão, não é serviço externo.
+  Para regerar (ex.: trocou de foto no GitHub), rode scripts/build_hero.py.
 
   RESTRIÇÕES DO GITHUB RESPEITADAS AQUI
   • Zero JavaScript (o GitHub não executa)
-  • Zero style="" e class="" (o sanitizador do GitHub remove)
-  • Layout só via <div align>, <table>, width= — a única forma confiável
+  • Zero style="" e class="" no markdown (o sanitizador remove)
+  • Layout via <div align>, <table>, width= — a única forma confiável
   • Toda <img> tem alt=
 ═══════════════════════════════════════════════════════════════════════════════
 -->
 
 <div align="center">
 
+<!-- Card de hero: retrato ASCII (gerado do avatar real) + identidade.
+     EDITAR: o conteúdo dele vive em scripts/build_hero.py, não aqui. -->
+<img
+  src="assets/hero.svg"
+  alt="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Aberto a oportunidades remotas. Stack: TypeScript, Next.js, React, PHP, WordPress e Docker."
+  width="100%"
+/>
+
+<br />
+
 <!-- EDITAR: as frases da animação ficam em &lines=, separadas por ";".
      Espaço = "+"   ·   "&" = %26   ·   "," = %2C   ·   máx. ~6 frases -->
 <img
   alt="Full Stack Web Developer · React, Next.js e TypeScript · NestJS, GraphQL e Prisma · Especialista em WordPress e PHP · APIs, performance e SEO técnico"
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E19B&background=0D1117&center=true&vCenter=true&width=640&height=64&lines=Full+Stack+Web+Developer;React%2C+Next.js+%26+TypeScript;NestJS%2C+GraphQL+%26+Prisma;WordPress+%26+PHP+Specialist;APIs%2C+Performance+%26+Technical+SEO;Turning+ideas+into+scalable+products"
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=4ADE80&background=0A0A0C&center=true&vCenter=true&width=640&height=56&lines=Full+Stack+Web+Developer;React%2C+Next.js+%26+TypeScript;NestJS%2C+GraphQL+%26+Prisma;WordPress+%26+PHP+Specialist;APIs%2C+Performance+%26+Technical+SEO;Turning+ideas+into+scalable+products"
 />
 
-# Leonardo Tino
-
-**Desenvolvedor Web Full Stack** &nbsp;·&nbsp; São Paulo, Brasil
-
-*Desenvolvo experiências digitais rápidas, escaláveis e orientadas a resultados.*
-
 <br />
 
-<!-- ── Faixa de status: badges pequenos, informativos, sem competir com os CTAs ──
-     EDITAR: acentos precisam ficar percent-encoded.
-     ê=%C3%AA  ç=%C3%A7  ã=%C3%A3  ó=%C3%B3  "+"=%2B  "&"=%26  hífen literal="--" -->
-![Aberto a oportunidades: remoto](https://img.shields.io/badge/-Aberto_a_oportunidades_%C2%B7_Remoto-0D1117?style=flat-square&labelColor=00E19B)
-![Experiência: 5+ anos](https://img.shields.io/badge/Experi%C3%AAncia-5%2B_anos-21262D?style=flat-square&labelColor=0D1117)
-![Formação: Ciência da Computação](https://img.shields.io/badge/Forma%C3%A7%C3%A3o-Ci%C3%AAncia_da_Computa%C3%A7%C3%A3o-21262D?style=flat-square&labelColor=0D1117)
-![Pós-graduação em IA e LLMs](https://img.shields.io/badge/P%C3%B3s--gradua%C3%A7%C3%A3o-IA_%26_LLMs-21262D?style=flat-square&labelColor=0D1117)
-![Idiomas: português nativo e inglês fluente](https://img.shields.io/badge/Idiomas-PT_nativo_%7C_EN_fluente-21262D?style=flat-square&labelColor=0D1117)
-
-<br />
-
-<!-- ── CTA primário: só DOIS botões grandes. É o que o recrutador clica. ──
-     EDITAR: confirme a URL do LinkedIn e o e-mail de contato -->
-[![Falar comigo no LinkedIn](https://img.shields.io/badge/Vamos_conversar-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117)](https://linkedin.com/in/leonardo-tino)
+<!-- ── CTA primário: só DOIS botões grandes. É o que o recrutador clica. ── -->
+[![Falar comigo no LinkedIn](https://img.shields.io/badge/Vamos_conversar-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A0A0C)](https://linkedin.com/in/leonardo-tino)
 &nbsp;
-[![Enviar e-mail para Leonardo Tino](https://img.shields.io/badge/Me_enviar_um_e--mail-0D1117?style=for-the-badge&logo=maildotru&logoColor=00E19B&labelColor=0D1117)](mailto:leo_tino@outlook.com.br?subject=Oportunidade%20—%20Desenvolvedor%20Full%20Stack)
+[![Enviar e-mail para Leonardo Tino](https://img.shields.io/badge/Me_enviar_um_e--mail-0A0A0C?style=for-the-badge&logo=maildotru&logoColor=4ADE80&labelColor=0A0A0C)](mailto:leo_tino@outlook.com.br?subject=Oportunidade%20—%20Desenvolvedor%20Full%20Stack)
 
-<!-- ── Links secundários: peso visual menor de propósito ── -->
-<!-- EDITAR: o CV aponta para o PDF hospedado no leotino.dev.
-     Se um dia trocar o arquivo de lugar, este link aparece em 2 pontos do README. -->
-[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-leotino.dev-21262D?style=flat-square&logo=googlechrome&logoColor=C9D1D9&labelColor=0D1117)](https://leotino.dev)
-[![Currículo em PDF](https://img.shields.io/badge/Curr%C3%ADculo-PDF-21262D?style=flat-square&logo=readdotcv&logoColor=C9D1D9&labelColor=0D1117)](https://leotino.dev/cv-leonardo-tino-pt.pdf)
+<!-- ── Faixa informativa: peso visual menor de propósito ──
+     EDITAR: acentos precisam ficar percent-encoded.
+     ê=%C3%AA  ç=%C3%A7  ã=%C3%A3  ó=%C3%B3  í=%C3%AD  "+"=%2B  "&"=%26
+     hífen literal = "--"   ·   underscore literal = "__" -->
+![Experiência: 5+ anos](https://img.shields.io/badge/Experi%C3%AAncia-5%2B_anos-1A1A20?style=flat-square&labelColor=0A0A0C)
+![Formação: Ciência da Computação](https://img.shields.io/badge/Forma%C3%A7%C3%A3o-Ci%C3%AAncia_da_Computa%C3%A7%C3%A3o-1A1A20?style=flat-square&labelColor=0A0A0C)
+![Pós-graduação em IA e LLMs](https://img.shields.io/badge/P%C3%B3s--gradua%C3%A7%C3%A3o-IA_%26_LLMs-1A1A20?style=flat-square&labelColor=0A0A0C)
+![Idiomas: português nativo e inglês fluente](https://img.shields.io/badge/Idiomas-PT_nativo_%7C_EN_fluente-1A1A20?style=flat-square&labelColor=0A0A0C)
+
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-leotino.dev-1A1A20?style=flat-square&logo=googlechrome&logoColor=A1A1AA&labelColor=0A0A0C)](https://leotino.dev)
+[![Currículo em PDF](https://img.shields.io/badge/Curr%C3%ADculo-PDF-1A1A20?style=flat-square&logo=readdotcv&logoColor=A1A1AA&labelColor=0A0A0C)](https://leotino.dev/cv-leonardo-tino-pt.pdf)
 
 </div>
 
@@ -63,7 +64,7 @@
 
 ## Aberto a oportunidades
 
-<!-- Este bloco usa o "alert" nativo do GitHub ([!TIP] = borda e ícone verdes).
+<!-- Alert nativo do GitHub ([!TIP] = borda e ícone verdes).
      Regra: TODA linha precisa começar com ">", inclusive as vazias. -->
 
 > [!TIP]
@@ -114,54 +115,54 @@ O fio condutor é gostar de estar perto do problema de negócio. Já liderei uma
 <sub>O QUE EU USO EM PRODUÇÃO — NÃO O QUE EU JÁ VI UM TUTORIAL</sub>
 
 <!-- EDITAR: padrão do badge (fundo escuro + logo colorido = visual coeso, não arco-íris)
-     https://img.shields.io/badge/NOME-0D1117?style=flat-square&logo=SLUG&logoColor=COR
+     https://img.shields.io/badge/NOME-0A0A0C?style=flat-square&logo=SLUG&logoColor=COR
      Slugs de logo: https://simpleicons.org
      Regra: não coloque badge de tecnologia que você não defenderia numa entrevista. -->
 
 **Front-end**
 
-![React](https://img.shields.io/badge/React-0D1117?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-0D1117?style=flat-square&logo=nextdotjs&logoColor=FFFFFF)
-![TypeScript](https://img.shields.io/badge/TypeScript-0D1117?style=flat-square&logo=typescript&logoColor=3178C6)
-![JavaScript](https://img.shields.io/badge/JavaScript-0D1117?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0D1117?style=flat-square&logo=tailwindcss&logoColor=38BDF8)
-![Sass](https://img.shields.io/badge/Sass-0D1117?style=flat-square&logo=sass&logoColor=CC6699)
+![React](https://img.shields.io/badge/React-0A0A0C?style=flat-square&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-0A0A0C?style=flat-square&logo=nextdotjs&logoColor=FFFFFF)
+![TypeScript](https://img.shields.io/badge/TypeScript-0A0A0C?style=flat-square&logo=typescript&logoColor=3178C6)
+![JavaScript](https://img.shields.io/badge/JavaScript-0A0A0C?style=flat-square&logo=javascript&logoColor=F7DF1E)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0A0A0C?style=flat-square&logo=tailwindcss&logoColor=38BDF8)
+![Sass](https://img.shields.io/badge/Sass-0A0A0C?style=flat-square&logo=sass&logoColor=CC6699)
 
 **Back-end**
 
-![Node.js](https://img.shields.io/badge/Node.js-0D1117?style=flat-square&logo=nodedotjs&logoColor=339933)
-![NestJS](https://img.shields.io/badge/NestJS-0D1117?style=flat-square&logo=nestjs&logoColor=E0234E)
-![PHP](https://img.shields.io/badge/PHP-0D1117?style=flat-square&logo=php&logoColor=8892BF)
-![GraphQL](https://img.shields.io/badge/GraphQL-0D1117?style=flat-square&logo=graphql&logoColor=E10098)
-![Apollo Client](https://img.shields.io/badge/Apollo_Client-0D1117?style=flat-square&logo=apollographql&logoColor=FFFFFF)
+![Node.js](https://img.shields.io/badge/Node.js-0A0A0C?style=flat-square&logo=nodedotjs&logoColor=4ADE80)
+![NestJS](https://img.shields.io/badge/NestJS-0A0A0C?style=flat-square&logo=nestjs&logoColor=E0234E)
+![PHP](https://img.shields.io/badge/PHP-0A0A0C?style=flat-square&logo=php&logoColor=8892BF)
+![GraphQL](https://img.shields.io/badge/GraphQL-0A0A0C?style=flat-square&logo=graphql&logoColor=E10098)
+![Apollo Client](https://img.shields.io/badge/Apollo_Client-0A0A0C?style=flat-square&logo=apollographql&logoColor=FFFFFF)
 
 **CMS e e-commerce**
 
-![WordPress](https://img.shields.io/badge/WordPress-0D1117?style=flat-square&logo=wordpress&logoColor=21759B)
-![WooCommerce](https://img.shields.io/badge/WooCommerce-0D1117?style=flat-square&logo=woocommerce&logoColor=96588A)
-![Elementor](https://img.shields.io/badge/Elementor-0D1117?style=flat-square&logo=elementor&logoColor=92003B)
+![WordPress](https://img.shields.io/badge/WordPress-0A0A0C?style=flat-square&logo=wordpress&logoColor=A1A1AA)
+![WooCommerce](https://img.shields.io/badge/WooCommerce-0A0A0C?style=flat-square&logo=woocommerce&logoColor=A78BFA)
+![Elementor](https://img.shields.io/badge/Elementor-0A0A0C?style=flat-square&logo=elementor&logoColor=92003B)
 
 **Dados**
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0D1117?style=flat-square&logo=postgresql&logoColor=4169E1)
-![MySQL](https://img.shields.io/badge/MySQL-0D1117?style=flat-square&logo=mysql&logoColor=4479A1)
-![Prisma](https://img.shields.io/badge/Prisma-0D1117?style=flat-square&logo=prisma&logoColor=FFFFFF)
-![Redis](https://img.shields.io/badge/Redis-0D1117?style=flat-square&logo=redis&logoColor=DC382D)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0A0A0C?style=flat-square&logo=postgresql&logoColor=4169E1)
+![MySQL](https://img.shields.io/badge/MySQL-0A0A0C?style=flat-square&logo=mysql&logoColor=4479A1)
+![Prisma](https://img.shields.io/badge/Prisma-0A0A0C?style=flat-square&logo=prisma&logoColor=FFFFFF)
+![Redis](https://img.shields.io/badge/Redis-0A0A0C?style=flat-square&logo=redis&logoColor=DC382D)
 
 **Infraestrutura e ferramentas**
 
-![Docker](https://img.shields.io/badge/Docker-0D1117?style=flat-square&logo=docker&logoColor=2496ED)
-![NGINX](https://img.shields.io/badge/NGINX-0D1117?style=flat-square&logo=nginx&logoColor=009639)
-![AWS](https://img.shields.io/badge/AWS-0D1117?style=flat-square&logo=amazonwebservices&logoColor=FF9900)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-0D1117?style=flat-square&logo=cloudflare&logoColor=F38020)
-![Git](https://img.shields.io/badge/Git-0D1117?style=flat-square&logo=git&logoColor=F05032)
-![Bitbucket](https://img.shields.io/badge/Bitbucket-0D1117?style=flat-square&logo=bitbucket&logoColor=0052CC)
+![Docker](https://img.shields.io/badge/Docker-0A0A0C?style=flat-square&logo=docker&logoColor=2496ED)
+![NGINX](https://img.shields.io/badge/NGINX-0A0A0C?style=flat-square&logo=nginx&logoColor=4ADE80)
+![AWS](https://img.shields.io/badge/AWS-0A0A0C?style=flat-square&logo=amazonwebservices&logoColor=FF9900)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-0A0A0C?style=flat-square&logo=cloudflare&logoColor=F38020)
+![Git](https://img.shields.io/badge/Git-0A0A0C?style=flat-square&logo=git&logoColor=F05032)
+![Bitbucket](https://img.shields.io/badge/Bitbucket-0A0A0C?style=flat-square&logo=bitbucket&logoColor=0052CC)
 
 **Qualidade e metodologia**
 
-![Jest](https://img.shields.io/badge/Jest-0D1117?style=flat-square&logo=jest&logoColor=C21325)
-![Playwright](https://img.shields.io/badge/Playwright-0D1117?style=flat-square&logo=playwright&logoColor=2EAD33)
-![Scrum e Kanban](https://img.shields.io/badge/Scrum_%26_Kanban-0D1117?style=flat-square&logo=jira&logoColor=0052CC)
+![Jest](https://img.shields.io/badge/Jest-0A0A0C?style=flat-square&logo=jest&logoColor=C21325)
+![Playwright](https://img.shields.io/badge/Playwright-0A0A0C?style=flat-square&logo=playwright&logoColor=4ADE80)
+![Scrum e Kanban](https://img.shields.io/badge/Scrum_%26_Kanban-0A0A0C?style=flat-square&logo=jira&logoColor=A78BFA)
 
 <sub>Também trabalho com Clean Architecture e SOLID no dia a dia — mas isso é postura de código, não badge.</sub>
 
@@ -229,7 +230,7 @@ Os projetos com contexto, decisões técnicas e resultado estão reunidos no por
 
 <div align="center">
 
-[![Ver projetos no portfólio](https://img.shields.io/badge/Ver_os_projetos-leotino.dev-0D1117?style=for-the-badge&logo=googlechrome&logoColor=00E19B&labelColor=0D1117)](https://leotino.dev/#projects)
+[![Ver projetos no portfólio](https://img.shields.io/badge/Ver_os_projetos-leotino.dev-0A0A0C?style=for-the-badge&logo=googlechrome&logoColor=4ADE80&labelColor=0A0A0C)](https://leotino.dev/#projects)
 
 </div>
 
@@ -278,10 +279,8 @@ Os projetos com contexto, decisões técnicas e resultado estão reunidos no por
 | :--- | :--- | :--- | :--- |
 | **{{NOME_DO_PROJETO_2}}** | {{PROBLEMA_EM_UMA_LINHA}} | `{{TEC}}` `{{TEC}}` | [Código]({{URL_REPO_2}}) · [Demo]({{URL_DEMO_2}}) |
 | **{{NOME_DO_PROJETO_3}}** | {{PROBLEMA_EM_UMA_LINHA}} | `{{TEC}}` `{{TEC}}` | [Código]({{URL_REPO_3}}) · [Demo]({{URL_DEMO_3}}) |
-| **{{NOME_DO_PROJETO_4}}** | {{PROBLEMA_EM_UMA_LINHA}} | `{{TEC}}` `{{TEC}}` | [Código]({{URL_REPO_4}}) · [Demo]({{URL_DEMO_4}}) |
 
      ═══════════════════════════════════════════════════════════════════════════ -->
-
 
 ---
 
@@ -296,13 +295,13 @@ Boa parte do meu trabalho profissional vive em repositórios privados de empresa
 <img
   alt="Gráfico de atividade de contribuições de Leonardo Tino no GitHub ao longo do último ano"
   width="100%"
-  src="https://github-readme-activity-graph.vercel.app/graph?username=ltin0&bg_color=0D1117&color=C9D1D9&line=00E19B&point=00E19B&area=true&area_color=00E19B&hide_border=true&radius=8"
+  src="https://github-readme-activity-graph.vercel.app/graph?username=ltin0&bg_color=0A0A0C&color=A1A1AA&line=4ADE80&point=A78BFA&area=true&area_color=4ADE80&hide_border=true&radius=8"
 />
 
 <img
   alt="Sequência de contribuições de Leonardo Tino no GitHub"
   height="170"
-  src="https://streak-stats.demolab.com?user=ltin0&hide_border=true&background=0D1117&stroke=21262D&ring=00E19B&fire=00E19B&currStreakLabel=00E19B&currStreakNum=C9D1D9&sideLabels=C9D1D9&sideNums=C9D1D9&dates=8B949E"
+  src="https://streak-stats.demolab.com?user=ltin0&hide_border=true&background=0A0A0C&stroke=26262D&ring=4ADE80&fire=A78BFA&currStreakLabel=4ADE80&currStreakNum=F4F4F5&sideLabels=A1A1AA&sideNums=F4F4F5&dates=71717A"
 />
 
 </div>
@@ -320,7 +319,7 @@ Boa parte do meu trabalho profissional vive em repositórios privados de empresa
        2. Importe o fork em https://vercel.com/new (framework: Other)
        3. Crie um Personal Access Token do GitHub (escopo: public_repo)
        4. Na Vercel, adicione a variável de ambiente PAT_1 com esse token
-       5. Troque "github-readme-stats.vercel.app" abaixo pelo domínio do seu deploy
+       5. Troque SEU-DEPLOY.vercel.app abaixo pelo domínio do seu deploy
        6. Descomente este bloco
 
      EDITAR: em top-langs, some &hide=html,css para esconder linguagens que
@@ -330,33 +329,36 @@ Boa parte do meu trabalho profissional vive em repositórios privados de empresa
   <img
     alt="Estatísticas do GitHub de Leonardo Tino: commits, pull requests, issues e estrelas"
     height="165"
-    src="https://SEU-DEPLOY.vercel.app/api?username=ltin0&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=0D1117&title_color=00E19B&icon_color=00E19B&text_color=C9D1D9"
+    src="https://SEU-DEPLOY.vercel.app/api?username=ltin0&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=0A0A0C&title_color=4ADE80&icon_color=A78BFA&text_color=A1A1AA"
   />
   <img
     alt="Linguagens mais utilizadas nos repositórios públicos de Leonardo Tino"
     height="165"
-    src="https://SEU-DEPLOY.vercel.app/api/top-langs/?username=ltin0&layout=compact&hide_border=true&langs_count=8&bg_color=0D1117&title_color=00E19B&text_color=C9D1D9"
+    src="https://SEU-DEPLOY.vercel.app/api/top-langs/?username=ltin0&layout=compact&hide_border=true&langs_count=8&bg_color=0A0A0C&title_color=4ADE80&text_color=A1A1AA"
   />
 </div>
      ═══════════════════════════════════════════════════════════════════════════ -->
 
 ---
 
-## Commit Invaders
+## Pac-Man
 
 <sub>MEU GRÁFICO DE CONTRIBUIÇÕES, JOGÁVEL — GERADO DIARIAMENTE POR UMA ACTION</sub>
 
-<!-- Gerado por .github/workflows/commit-invaders.yml (Goblinlordx/commit-invaders@v1).
-     A própria action commita os SVGs na branch "output" deste repositório.
+<!-- Gerado por .github/workflows/pacman.yml (abozanona/pacman-contribution-graph).
+     A action publica os SVGs na branch "output" deste repositório.
      AS IMAGENS SÓ APARECEM DEPOIS DA PRIMEIRA EXECUÇÃO DO WORKFLOW.
-     EDITAR: troque ltin0/ltin0 se o repositório tiver outro nome. -->
+
+     EDITAR — trocar de jogo: no workflow, mude o input "games". A action também
+     gera breakout, galaga, puzzle-bobble, bomberman e minesweeper. O nome do
+     arquivo acompanha o jogo: <jogo>-contribution-graph.svg -->
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/commit-invaders-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/commit-invaders.svg" />
-  <img alt="Animação estilo Space Invaders gerada a partir do grid de contribuições do GitHub de Leonardo Tino" width="100%" src="https://raw.githubusercontent.com/ltin0/ltin0/output/commit-invaders.svg" />
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph.svg" />
+  <img alt="Animação estilo Pac-Man gerada a partir do grid de contribuições do GitHub de Leonardo Tino" width="100%" src="https://raw.githubusercontent.com/ltin0/ltin0/output/pacman-contribution-graph.svg" />
 </picture>
 
 </div>
@@ -369,9 +371,10 @@ Boa parte do meu trabalho profissional vive em repositórios privados de empresa
 
 <!-- Gerado por .github/workflows/profile-3d.yml (yoshi389111/github-profile-3d-contrib).
      Os SVGs vão para a pasta profile-3d-contrib/ na branch principal.
-     VALIDAR APÓS A 1ª EXECUÇÃO: a action gera vários arquivos de tema nessa pasta
-     (profile-night-green, profile-night-view, profile-green-animate, profile-season-animate,
-     profile-gitblock...). Abra a pasta, escolha o que preferir e ajuste o nome abaixo. -->
+     EDITAR: a action gera 10 temas nessa pasta. Além do usado abaixo, existem
+     profile-green-animate, profile-season-animate, profile-night-view,
+     profile-night-rainbow, profile-gitblock, profile-green, profile-season,
+     profile-south-season e profile-south-season-animate. Os "-animate" têm movimento. -->
 
 <div align="center">
 
@@ -393,30 +396,14 @@ Se você tem uma vaga, uma ideia de produto ou um problema técnico que vale a p
 
 <br />
 
-[![LinkedIn de Leonardo Tino](https://img.shields.io/badge/LinkedIn-leonardo--tino-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117)](https://linkedin.com/in/leonardo-tino)
-[![E-mail de Leonardo Tino](https://img.shields.io/badge/E--mail-leo__tino@outlook.com.br-0D1117?style=for-the-badge&logo=maildotru&logoColor=00E19B&labelColor=0D1117)](mailto:leo_tino@outlook.com.br?subject=Oportunidade%20—%20Desenvolvedor%20Full%20Stack)
+[![LinkedIn de Leonardo Tino](https://img.shields.io/badge/LinkedIn-leonardo--tino-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A0A0C)](https://linkedin.com/in/leonardo-tino)
+[![E-mail de Leonardo Tino](https://img.shields.io/badge/E--mail-leo__tino@outlook.com.br-0A0A0C?style=for-the-badge&logo=maildotru&logoColor=4ADE80&labelColor=0A0A0C)](mailto:leo_tino@outlook.com.br?subject=Oportunidade%20—%20Desenvolvedor%20Full%20Stack)
 
-[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-leotino.dev-21262D?style=flat-square&logo=googlechrome&logoColor=C9D1D9&labelColor=0D1117)](https://leotino.dev)
-[![Currículo em PDF](https://img.shields.io/badge/Curr%C3%ADculo-baixar_PDF-21262D?style=flat-square&logo=readdotcv&logoColor=C9D1D9&labelColor=0D1117)](https://leotino.dev/cv-leonardo-tino-pt.pdf)
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-leotino.dev-1A1A20?style=flat-square&logo=googlechrome&logoColor=A1A1AA&labelColor=0A0A0C)](https://leotino.dev)
+[![Currículo em PDF](https://img.shields.io/badge/Curr%C3%ADculo-baixar_PDF-1A1A20?style=flat-square&logo=readdotcv&logoColor=A1A1AA&labelColor=0A0A0C)](https://leotino.dev/cv-leonardo-tino-pt.pdf)
 
 <br />
 
 <sub>São Paulo, Brasil · BRT (UTC−3) · trabalho remoto · confortável em inglês</sub>
 
 </div>
-
-<!-- Wordmark ASCII — a assinatura do perfil.
-     Fica FORA do <div align="center"> DE PROPÓSITO: dentro de um bloco
-     centralizado o GitHub centraliza cada linha individualmente e o desenho
-     quebra. Alinhado à esquerda ele fica correto em qualquer largura de tela.
-     São 63 caracteres: no celular o próprio bloco rola, sem afetar a página.
-     EDITAR: para gerar um novo, use https://patorjk.com/software/taag (fonte "Small"). -->
-
-```
- _    ___ ___  _  _   _   ___ ___   ___    _____ ___ _  _  ___
-| |  | __/ _ \| \| | /_\ | _ \   \ / _ \  |_   _|_ _| \| |/ _ \
-| |__| _| (_) | .` |/ _ \|   / |) | (_) |   | |  | || .` | (_) |
-|____|___\___/|_|\_/_/ \_\_|_\___/ \___/    |_| |___|_|\_|\___/
-
-     full stack · react · next.js · nestjs · php · wordpress
-```
