@@ -31,7 +31,7 @@
      O conteúdo dele vive em scripts/build_hero.py, não aqui. -->
 <img
   src="assets/hero.svg"
-  alt="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Aberto a oportunidades remotas. Stack: TypeScript, Next.js, React, PHP, WordPress e Docker."
+  alt="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Stack: TypeScript, Next.js, React, PHP, WordPress e Docker."
   width="100%"
 />
 

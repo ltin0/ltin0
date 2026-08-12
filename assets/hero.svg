@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"
-     width="1000" height="400" role="img" aria-label="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Aberto a oportunidades remotas. Stack: TypeScript, Next.js, React, PHP, WordPress, Docker.">
+     width="1000" height="400" role="img" aria-label="Leonardo Tino — Desenvolvedor Web Full Stack em São Paulo, Brasil. Stack: TypeScript, Next.js, React, PHP, WordPress, Docker.">
   <title>Leonardo Tino — Desenvolvedor Web Full Stack</title>
 
   <defs>
@@ -49,45 +49,39 @@
     <text x="56" y="369.4" textLength="303.6" lengthAdjust="spacing">          ..                                  </text>
   </g>
 
-  <g>
-    <rect x="420" y="66" width="330" height="30" rx="15" fill="#0F2A1B" stroke="#1F6F42"/>
-    <circle cx="438" cy="81" r="4" fill="#4ADE80"/>
-    <text x="452" y="86" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600"
-          letter-spacing="0.6" fill="#4ADE80">ABERTO A OPORTUNIDADES · REMOTO</text>
-  </g>
 
-  <text x="420" y="164" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="52" font-weight="700"
+  <text x="420" y="135" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="52" font-weight="700"
         fill="#4ADE80">Leonardo Tino</text>
 
-  <text x="420" y="200" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="19" font-weight="600" fill="#F4F4F5">
+  <text x="420" y="171" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="19" font-weight="600" fill="#F4F4F5">
     Desenvolvedor Web Full Stack<tspan fill="#A1A1AA" font-weight="400"> · São Paulo, Brasil</tspan>
   </text>
 
-  <text x="420" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">Desenvolvo experiências digitais rápidas, escaláveis</text>
-  <text x="420" y="262" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">e orientadas a resultados — do modelo de dados ao deploy.</text>
+  <text x="420" y="211" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">Desenvolvo experiências digitais rápidas, escaláveis</text>
+  <text x="420" y="233" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#A1A1AA">e orientadas a resultados — do modelo de dados ao deploy.</text>
 
   <g>
-    <rect x="420" y="300" width="92" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="466" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">TypeScript</text>
+    <rect x="420" y="271" width="92" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="466" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">TypeScript</text>
   </g>
   <g>
-    <rect x="521" y="300" width="74" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="558" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Next.js</text>
+    <rect x="521" y="271" width="74" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="558" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Next.js</text>
   </g>
   <g>
-    <rect x="604" y="300" width="66" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="637" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">React</text>
+    <rect x="604" y="271" width="66" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="637" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">React</text>
   </g>
   <g>
-    <rect x="679" y="300" width="54" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="706" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">PHP</text>
+    <rect x="679" y="271" width="54" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="706" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">PHP</text>
   </g>
   <g>
-    <rect x="742" y="300" width="94" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="789" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">WordPress</text>
+    <rect x="742" y="271" width="94" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="789" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">WordPress</text>
   </g>
   <g>
-    <rect x="845" y="300" width="72" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
-    <text x="881" y="319.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Docker</text>
+    <rect x="845" y="271" width="72" height="30" rx="15" fill="#1A1A20" stroke="#26262D"/>
+    <text x="881" y="290.2" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A1A1AA" text-anchor="middle">Docker</text>
   </g>
 </svg>

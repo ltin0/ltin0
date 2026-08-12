@@ -28,7 +28,10 @@ GITHUB_USER = "ltin0"
 NOME = "Leonardo Tino"
 CARGO = "Desenvolvedor Web Full Stack"
 LOCAL = "São Paulo, Brasil"
-STATUS = "ABERTO A OPORTUNIDADES · REMOTO"
+# Pill de status no topo da coluna. Deixe None para esconder — o bloco de texto
+# se recentraliza sozinho. Para voltar a exibir, basta preencher a string:
+#   STATUS = "ABERTO A OPORTUNIDADES · REMOTO"
+STATUS = None
 TAGLINE = [
     "Desenvolvo experiências digitais rápidas, escaláveis",
     "e orientadas a resultados — do modelo de dados ao deploy.",
@@ -135,13 +138,27 @@ def build() -> str:
         f'{escape(r.ljust(width_chars).replace(" ", chr(0xA0)))}</text>'
         for i, r in enumerate(rows) if r.strip())
 
+    # Sem a pill de status o bloco de texto sobe 29px, o que devolve o centro
+    # óptico da coluna ao centro do card. Medido, não chutado.
+    dy = 0 if STATUS else -29
+
     pills, px = [], col
     for label, w in STACK:
-        pills.append(pill(px, 300, w, 30, label, MUTED))
+        pills.append(pill(px, 300 + dy, w, 30, label, MUTED))
         px += w + 9
 
-    alt = (f"{NOME} — {CARGO} em {LOCAL}. Aberto a oportunidades remotas. "
-           f"Stack: {', '.join(s for s, _ in STACK)}.")
+    status_group = "" if not STATUS else f"""
+  <g>
+    <rect x="{col}" y="66" width="330" height="30" rx="15" fill="#0F2A1B" stroke="#1F6F42"/>
+    <circle cx="{col + 18}" cy="81" r="4" fill="{GREEN}"/>
+    <text x="{col + 32}" y="86" font-family="{SANS}" font-size="12.5" font-weight="600"
+          letter-spacing="0.6" fill="{GREEN}">{escape(STATUS)}</text>
+  </g>
+"""
+
+    alt = (f"{NOME} — {CARGO} em {LOCAL}."
+           + (" Aberto a oportunidades remotas." if STATUS else "")
+           + f" Stack: {', '.join(s for s, _ in STACK)}.")
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"
      width="{W}" height="{H}" role="img" aria-label="{escape(alt)}">
@@ -170,22 +187,16 @@ def build() -> str:
 {art}
   </g>
 
-  <g>
-    <rect x="{col}" y="66" width="330" height="30" rx="15" fill="#0F2A1B" stroke="#1F6F42"/>
-    <circle cx="{col + 18}" cy="81" r="4" fill="{GREEN}"/>
-    <text x="{col + 32}" y="86" font-family="{SANS}" font-size="12.5" font-weight="600"
-          letter-spacing="0.6" fill="{GREEN}">{escape(STATUS)}</text>
-  </g>
-
-  <text x="{col}" y="164" font-family="{SANS}" font-size="52" font-weight="700"
+{status_group}
+  <text x="{col}" y="{164 + dy}" font-family="{SANS}" font-size="52" font-weight="700"
         fill="{GREEN}">{escape(NOME)}</text>
 
-  <text x="{col}" y="200" font-family="{SANS}" font-size="19" font-weight="600" fill="{TEXT}">
+  <text x="{col}" y="{200 + dy}" font-family="{SANS}" font-size="19" font-weight="600" fill="{TEXT}">
     {escape(CARGO)}<tspan fill="{MUTED}" font-weight="400"> · {escape(LOCAL)}</tspan>
   </text>
 
-  <text x="{col}" y="240" font-family="{SANS}" font-size="15" fill="{MUTED}">{escape(TAGLINE[0])}</text>
-  <text x="{col}" y="262" font-family="{SANS}" font-size="15" fill="{MUTED}">{escape(TAGLINE[1])}</text>
+  <text x="{col}" y="{240 + dy}" font-family="{SANS}" font-size="15" fill="{MUTED}">{escape(TAGLINE[0])}</text>
+  <text x="{col}" y="{262 + dy}" font-family="{SANS}" font-size="15" fill="{MUTED}">{escape(TAGLINE[1])}</text>
 
 {chr(10).join(pills)}
 </svg>
