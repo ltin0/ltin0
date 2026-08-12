@@ -1,0 +1,72 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  SALVAR EM:  .github/workflows/snake.yml   (no repo ltin0/ltin0)
+#
+#  OPCIONAL — este é o PLANO B do Commit Invaders.
+#
+#  Por que existe: o Goblinlordx/commit-invaders é um projeto novo e pequeno.
+#  Funciona, mas tem chance real de ficar sem manutenção. O Platane/snk é a
+#  action mais usada do ecossistema de README de perfil e é a aposta segura.
+#  Se um dia o Invaders quebrar, ative este workflow e troque a imagem no README.
+#
+#  Action:  https://github.com/Platane/snk
+#
+#  ⚠️ ATENÇÃO AO CONFLITO DE BRANCH
+#     O commit-invaders.yml também escreve na branch "output". O passo de
+#     publicação abaixo faz FORCE PUSH na branch de destino — se os dois
+#     apontarem para "output", um apaga o outro.
+#     Por isso este aqui usa a branch "output-snake".
+#
+#  Depois da primeira execução, a imagem fica em:
+#    https://raw.githubusercontent.com/ltin0/ltin0/output-snake/snake.svg
+#    https://raw.githubusercontent.com/ltin0/ltin0/output-snake/snake-dark.svg
+#
+#  E o bloco para colar no README é:
+#
+#    <picture>
+#      <source media="(prefers-color-scheme: dark)"
+#        srcset="https://raw.githubusercontent.com/ltin0/ltin0/output-snake/snake-dark.svg" />
+#      <source media="(prefers-color-scheme: light)"
+#        srcset="https://raw.githubusercontent.com/ltin0/ltin0/output-snake/snake.svg" />
+#      <img alt="Cobrinha percorrendo o grid de contribuicoes do GitHub de Leonardo Tino"
+#        width="100%" src="https://raw.githubusercontent.com/ltin0/ltin0/output-snake/snake.svg" />
+#    </picture>
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: Generate Snake
+
+on:
+  schedule:
+    # Todo dia às 04:00 UTC (01:00 em Brasília). Cron do GitHub roda em UTC.
+    # 🔧 EDITAR: ajuste o horário se quiser
+    - cron: "0 4 * * *"
+  workflow_dispatch: # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        id: snake
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # 🔧 EDITAR: as cores seguem o acento do README (#00E19B).
+          # O parâmetro color_snake aceita hex; color_dots vai do mais fraco ao mais forte.
+          outputs: |
+            dist/snake.svg?color_snake=%2300E19B&color_dots=%23EBEDF0,%239BE9A8,%2340C463,%2330A14E,%23216E39
+            dist/snake-dark.svg?palette=github-dark&color_snake=%2300E19B
+
+      - name: Publish to the output-snake branch
+        # ⚠️ Este passo faz force push na branch de destino. Use uma branch
+        #    dedicada — nunca "main" e nunca a mesma do commit-invaders.
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output-snake
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
