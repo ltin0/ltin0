@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="1200" height="140"
+     role="img" aria-label="Faixa decorativa em degradê verde e violeta.">
+  <!-- Onda de rodapé. Desenhada à mão de propósito: os geradores hospedados
+       em Vercel já saíram do ar duas vezes neste perfil, e decoração não
+       justifica mais uma dependência externa. Editar as cores aqui. -->
+  <defs>
+    <linearGradient id="w" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#4ADE80"/>
+      <stop offset="55%"  stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#w)" opacity="0.9"
+        d="M0,64 C150,110 280,10 440,44 C600,78 700,120 860,92 C1000,68 1100,28 1200,52 L1200,140 L0,140 Z"/>
+  <path fill="url(#w)" opacity="0.35"
+        d="M0,92 C160,52 300,116 460,88 C640,56 760,16 900,44 C1030,70 1120,104 1200,86 L1200,140 L0,140 Z"/>
+</svg>
