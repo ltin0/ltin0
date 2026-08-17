@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771 235"
      width="771" height="235" role="img"
-     aria-label="Grid de contribuições de ltin0 no GitHub no último ano, com 806 contribuições, animado como um jogo de nave: uma nave percorre o ano e dispara nos dias de maior atividade.">
-  <title>Contribution Activity — 806 contribuições no último ano</title>
+     aria-label="Grid de contribuições de ltin0 no GitHub no último ano, com 776 contribuições, animado como um jogo de nave: uma nave percorre o ano e dispara nos dias de maior atividade.">
+  <title>Contribution Activity — 776 contribuições no último ano</title>
 
   <style>
     /* Animação 100% CSS: o GitHub não executa JavaScript em SVG de README.
@@ -103,7 +103,7 @@
   <text x="26" y="26" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14"
         font-weight="700" fill="#F4F4F5">Contribution Activity</text>
   <text x="26" y="43" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11"
-        fill="#A1A1AA">806 contribuições no último ano</text>
+        fill="#A1A1AA">776 contribuições no último ano</text>
 
   <text x="589" y="26" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10"
         fill="#71717A">Menos</text>
@@ -494,6 +494,7 @@
     <rect x="697" y="131" width="11" height="11" rx="2.5" fill="#14532D"/>
     <rect x="697" y="144" width="11" height="11" rx="2.5" fill="#1A1A20"/>
     <rect x="710" y="66" width="11" height="11" rx="2.5" fill="#1A1A20"/>
+    <rect x="710" y="79" width="11" height="11" rx="2.5" fill="#1A1A20"/>
   </g>
 
   <g>
