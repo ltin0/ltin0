@@ -26,19 +26,19 @@ from PIL import Image, ImageEnhance, ImageOps
 # ── o que você pode querer editar ────────────────────────────────────────────
 GITHUB_USER = "ltin0"
 NOME = "Leonardo Tino"
-CARGO = "Full-Stack Product Engineer"
+CARGO = "Desenvolvedor Web Full Stack"
 LOCAL = "São Paulo, Brasil"
 # Pill de status no topo da coluna. Deixe None para esconder — o bloco de texto
 # se recentraliza sozinho. Para voltar a exibir, basta preencher a string:
 #   STATUS = "ABERTO A OPORTUNIDADES · REMOTO"
 STATUS = None
 TAGLINE = [
-    "Produtos SaaS, automações com IA e plataformas web",
-    "confiáveis — da arquitetura ao deploy.",
+    "Desenvolvo experiências digitais rápidas, escaláveis",
+    "e orientadas a resultados — do modelo de dados ao deploy.",
 ]
 # (rótulo, largura da pill). Largura folgada de propósito — veja nota em pill().
-STACK = [("TypeScript", 92), ("Next.js", 74), ("NestJS", 74),
-         ("GraphQL", 78), ("Postgres", 82), ("Docker", 72)]
+STACK = [("TypeScript", 92), ("Next.js", 74), ("React", 66),
+         ("PHP", 54), ("WordPress", 94), ("Docker", 72)]
 
 # ── identidade visual ────────────────────────────────────────────────────────
 BG, BORDER = "#131317", "#26262D"
