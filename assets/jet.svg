@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771 235"
      width="771" height="235" role="img"
-     aria-label="Grid de contribuições de ltin0 no GitHub no último ano, com 787 contribuições, animado como um jogo de nave: uma nave percorre o ano e dispara nos dias de maior atividade.">
-  <title>Contribution Activity — 787 contribuições no último ano</title>
+     aria-label="Grid de contribuições de ltin0 no GitHub no último ano, com 796 contribuições, animado como um jogo de nave: uma nave percorre o ano e dispara nos dias de maior atividade.">
+  <title>Contribution Activity — 796 contribuições no último ano</title>
 
   <style>
     /* Animação 100% CSS: o GitHub não executa JavaScript em SVG de README.
@@ -103,7 +103,7 @@
   <text x="26" y="26" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14"
         font-weight="700" fill="#F4F4F5">Contribution Activity</text>
   <text x="26" y="43" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11"
-        fill="#A1A1AA">787 contribuições no último ano</text>
+        fill="#A1A1AA">796 contribuições no último ano</text>
 
   <text x="589" y="26" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10"
         fill="#71717A">Menos</text>
@@ -494,7 +494,8 @@
     <rect x="697" y="144" width="11" height="11" rx="2.5" fill="#1A1A20"/>
     <rect x="710" y="66" width="11" height="11" rx="2.5" fill="#1A1A20"/>
     <rect x="710" y="79" width="11" height="11" rx="2.5" fill="#166534"/>
-    <rect x="710" y="92" width="11" height="11" rx="2.5" fill="#14532D"/>
+    <rect x="710" y="92" width="11" height="11" rx="2.5" fill="#166534"/>
+    <rect x="710" y="105" width="11" height="11" rx="2.5" fill="#14532D"/>
   </g>
 
   <g>
@@ -510,12 +511,12 @@
     <circle class="boom" cx="416.5" cy="136.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:3.93s"/>
     <rect class="hit" x="437.0" y="79" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:4.14s"/>
     <circle class="boom" cx="442.5" cy="84.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:4.14s"/>
-    <rect class="hit" x="580.0" y="118" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:5.31s"/>
-    <circle class="boom" cx="585.5" cy="123.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:5.31s"/>
-    <rect class="hit" x="606.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:5.52s"/>
-    <circle class="boom" cx="611.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:5.52s"/>
-    <rect class="hit" x="684.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:6.15s"/>
-    <circle class="boom" cx="689.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:6.15s"/>
+    <rect class="hit" x="593.0" y="79" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:5.41s"/>
+    <circle class="boom" cx="598.5" cy="84.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:5.41s"/>
+    <rect class="hit" x="671.0" y="118" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:6.05s"/>
+    <circle class="boom" cx="676.5" cy="123.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:6.05s"/>
+    <rect class="hit" x="697.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:6.26s"/>
+    <circle class="boom" cx="702.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:6.26s"/>
     <rect class="hit" x="99.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:12.21s"/>
     <circle class="boom" cx="104.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:12.21s"/>
     <rect class="hit" x="164.0" y="105" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:11.68s"/>
@@ -526,14 +527,14 @@
     <circle class="boom" cx="390.5" cy="110.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:9.88s"/>
     <rect class="hit" x="424.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:9.56s"/>
     <circle class="boom" cx="429.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:9.56s"/>
-    <rect class="hit" x="476.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:9.14s"/>
-    <circle class="boom" cx="481.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:9.14s"/>
-    <rect class="hit" x="593.0" y="79" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:8.19s"/>
-    <circle class="boom" cx="598.5" cy="84.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:8.19s"/>
-    <rect class="hit" x="671.0" y="118" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:7.55s"/>
-    <circle class="boom" cx="676.5" cy="123.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:7.55s"/>
-    <rect class="hit" x="697.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:7.34s"/>
-    <circle class="boom" cx="702.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:7.34s"/>
+    <rect class="hit" x="580.0" y="118" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:8.29s"/>
+    <circle class="boom" cx="585.5" cy="123.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:8.29s"/>
+    <rect class="hit" x="606.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:8.08s"/>
+    <circle class="boom" cx="611.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:8.08s"/>
+    <rect class="hit" x="684.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:7.45s"/>
+    <circle class="boom" cx="689.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:7.45s"/>
+    <rect class="hit" x="710.0" y="92" width="11" height="11" rx="2.5" fill="#A78BFA" style="animation-delay:7.24s"/>
+    <circle class="boom" cx="715.5" cy="97.5" r="3" fill="none" stroke="#A78BFA" stroke-width="1.5" style="animation-delay:7.24s"/>
   </g>
 
   <g>
@@ -543,18 +544,18 @@
     <rect class="tiro" x="272.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-52.0px;animation-delay:2.47s"/>
     <rect class="tiro" x="415.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-39.0px;animation-delay:3.63s"/>
     <rect class="tiro" x="441.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-91.0px;animation-delay:3.84s"/>
-    <rect class="tiro" x="584.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-52.0px;animation-delay:5.01s"/>
-    <rect class="tiro" x="610.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:5.22s"/>
-    <rect class="tiro" x="688.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:5.85s"/>
+    <rect class="tiro" x="597.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-91.0px;animation-delay:5.11s"/>
+    <rect class="tiro" x="675.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-52.0px;animation-delay:5.75s"/>
+    <rect class="tiro" x="701.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:5.96s"/>
     <rect class="tiro" x="103.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:11.91s"/>
     <rect class="tiro" x="168.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-65.0px;animation-delay:11.38s"/>
     <rect class="tiro" x="220.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-91.0px;animation-delay:10.95s"/>
     <rect class="tiro" x="389.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-65.0px;animation-delay:9.58s"/>
     <rect class="tiro" x="428.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:9.26s"/>
-    <rect class="tiro" x="480.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:8.84s"/>
-    <rect class="tiro" x="597.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-91.0px;animation-delay:7.89s"/>
-    <rect class="tiro" x="675.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-52.0px;animation-delay:7.25s"/>
-    <rect class="tiro" x="701.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:7.04s"/>
+    <rect class="tiro" x="584.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-52.0px;animation-delay:7.99s"/>
+    <rect class="tiro" x="610.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:7.78s"/>
+    <rect class="tiro" x="688.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:7.15s"/>
+    <rect class="tiro" x="714.5" y="171.0" width="2" height="9" rx="1" fill="#4ADE80" style="--sobe:-78.0px;animation-delay:6.94s"/>
   </g>
 
   <!-- a nave. Desenhada apontando para cima: ela voa na horizontal e atira
